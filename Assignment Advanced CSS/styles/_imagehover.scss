@@ -1,0 +1,48 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+}
+
+//// Image hover met button
+
+.container-center {
+  @include flexCenter();
+}
+
+.container-main {
+  &__container-img {
+    @include flexCenter();
+    position: relative;
+    max-width: 350px;
+    &__image {
+      display: block;
+      width: 100%;
+      border-radius: 15px;
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: #008cba;
+      border-radius: 15px;
+      button {
+        color: black;
+        background-color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.container-main__container-img:hover .container-main__container-img__overlay {
+  opacity: 1;
+}

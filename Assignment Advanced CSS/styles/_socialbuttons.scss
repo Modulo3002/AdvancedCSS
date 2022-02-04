@@ -1,0 +1,58 @@
+.container-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 150px;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+
+  &__buttons {
+    width: 250px;
+    height: 50px;
+    transition-duration: 500ms;
+    transform: translateX(200px);
+  }
+
+  &__blog {
+    background: #e17b77;
+    transition-timing-function: linear;
+  }
+
+  &__twitter {
+    background: #00aced;
+    transition-timing-function: linear;
+  }
+
+  &__facebook {
+    background: #3b5998;
+    transition-timing-function: linear;
+  }
+
+  &__linkedin {
+    background: #007bb6;
+    transition-timing-function: linear;
+  }
+  &__github {
+    background: #333;
+    transition-timing-function: linear;
+  }
+}
+
+.container-buttons__buttons:hover {
+  transform: translateX(-0px);
+}
+
+.fa {
+  color: #fff;
+  font-size: 300px;
+  padding-left: 17px;
+  padding-top: 17px;
+}
+
+a {
+  color: #fff;
+  font-size: 17px;
+  transition-timing-function: linear;
+  padding-left: 30px;
+}
